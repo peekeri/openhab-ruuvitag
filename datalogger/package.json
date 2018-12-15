@@ -1,0 +1,12 @@
+{
+  "name": "openhab-ruuvitag-datalogger",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies":{
+    "noble":">=1.8.0",
+    "mqtt":"2.6.x"
+  },
+  "author": "Jari Sukanen",
+  "license": "MIT"
+}

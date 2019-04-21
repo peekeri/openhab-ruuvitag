@@ -1,0 +1,13 @@
+[Service]
+WorkingDirectory=/opt/ruuvi/datalogger
+ExecStart=/usr/bin/npm run start
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=propanel
+User=root
+Group=root
+Environment=
+
+[Install]
+WantedBy=multi-user.target

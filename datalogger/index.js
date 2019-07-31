@@ -3,7 +3,8 @@ var mqtt = require('mqtt');
 
 const addresses = [
   'f6:ab:f7:5b:ee:05',
-  'da:90:88:94:4e:5b'
+  'da:90:88:94:4e:5b',
+  'f8:5e:2d:d7:10:75'
 ];
 
 function decodeTemperature(value) {

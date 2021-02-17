@@ -1,13 +1,15 @@
+[Unit]
+Description=Ruuvi DataLogger
+After=network-online.target
+
 [Service]
-WorkingDirectory=/opt/ruuvi/datalogger
-ExecStart=/usr/bin/npm run start
-Restart=always
-StandardOutput=syslog
-StandardError=syslog
-SyslogIdentifier=propanel
+Type=simple
 User=root
 Group=root
 Environment=
+WorkingDirectory=/opt/ruuvi/datalogger
+ExecStart=/usr/local/bin/npm run start
+Restart=always
 
 [Install]
 WantedBy=multi-user.target

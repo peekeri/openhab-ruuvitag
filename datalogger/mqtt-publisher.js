@@ -8,11 +8,12 @@ class MqttPublisher {
       ca: [ configuration.ca ],
       checkServerIdentity: () => { return null; }
     };
+    this.connected = false;
     this.client = mqtt.connect(
       configuration.endpoint,
       options);
-    this.connected = false;
-    client.on('connect', function () {
+    this.client.on('connect', () => {
+      console.log(`MQTT client connected to ${configuration.endpoint}`);
       this.connected = true;
     });
   }
@@ -32,8 +33,10 @@ class MqttPublisher {
       tagName: this.tags[address].name
     };
     console.log('MQTT: Publishing to: home/ruuvi/' + address + ' value: ' + JSON.stringify(iotData));
-    this.client.publish('home/ruuvi/' + addr, JSON.stringify(iotData));
+    this.client.publish('home/ruuvi/' + address, JSON.stringify(iotData));
   }
 }
 
-export default MqttPublisher;
+module.exports = {
+  MqttPublisher
+};

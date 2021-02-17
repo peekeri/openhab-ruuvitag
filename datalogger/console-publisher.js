@@ -1,7 +1,9 @@
 class ConsolePublisher {
-  publish(addres, data) {
-    console.log('Publishing value: ' + JSON.stringify(data));
+  publish(address, data) {
+    console.log(`Current data from ${address}: ` + JSON.stringify(data));
   }
 }
 
-export default ConsolePublisher;
+module.exports = {
+  ConsolePublisher
+};

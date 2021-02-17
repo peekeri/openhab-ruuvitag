@@ -59,6 +59,6 @@ function decodeManufacturerData(buf) {
   };
 }
 
-export default {
+module.exports = {
   decodeManufacturerData: decodeManufacturerData
 };

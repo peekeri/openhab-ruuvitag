@@ -19,7 +19,7 @@ class PublishingState {
     }
 
     const now = Math.floor(new Date().getTime() / 1000);
-    return this.states[address].lastPublish >= now + publishInterval;
+    return this.states[address].lastPublish + publishInterval <= now;
   }
 
   updateState(address, data) {
@@ -35,4 +35,6 @@ class PublishingState {
   }
 }
 
-export default PublishingState;
+module.exports = {
+   PublishingState
+};

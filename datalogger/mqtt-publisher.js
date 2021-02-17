@@ -1,3 +1,5 @@
+const mqtt = require('mqtt');
+
 class MqttPublisher {
   constructor(tags, configuration) {
     this.tags = tags;

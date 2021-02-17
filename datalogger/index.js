@@ -9,7 +9,7 @@ const configuration = JSON.parse(fs.readFileSync('configuration.json'));
 const publishers = [
   new con.ConsolePublisher(),
   new mqtt.MqttPublisher(configuration.ruuviTags, configuration.mqtt)];
-const publishingState = new PublishingState(configuration.ruuviTags);
+const publishingState = new state.PublishingState(configuration.ruuviTags);
 
 noble.on('stateChange', function(state) {
   if (state === 'poweredOn') {

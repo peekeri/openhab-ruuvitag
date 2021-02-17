@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index-rawv2.js"
+    "start": "node index.js"
   },
   "dependencies":{
     "noble":">=1.8.0",

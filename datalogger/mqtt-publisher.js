@@ -27,7 +27,7 @@ class MqttPublisher {
     }
 
     const iotData = {
-      location: 'HomeIoT',
+      location: this.tags[address].location,
       temperature: data['temp'],
       humidity: data['humidity'],
       pressure: data['pressure'],
